@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="style.css"/>
+  <title>Movie Hub</title>
+</head>
+<style>
+/* Basic Styling */
+body {font-family: Arial, san-serif;
+  background-color: #f4f4f4;
+  margin: 0
+  padding:0;
+}
+/* Navbar Styling */
+.navbar{
+  background-color: #333; 
+  color:white;
+  padding:15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center 
+}
+.navbar ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:row;
+}
+.navbar ul li {margin:0 10px;}
+.navbar ul li a{
+  color:white;
+  text-decoration: none;
+  font-size: 18px; 
+}
+.navbar .logo{font-size:15px}
+/* Sidebar styling */
+.sidebar{width: 200px;
+  background-color:#444;
+  backdrop-filter:blur(10px);
+  color:white;
+  padding:20px
+  position:fixed;
+  height:100%;
+  top:0;
+  right:0;
+  overflow-y:auto;
+  z-index:999;
+  box-shadow:-10px 0 10px rgba(0,0,0,0.1);
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  
+  
+}
+.sidebar h2{margin-top:0;
+ color:#ffcc00;}
+.sidebar ul{list-style:none;
+  padding:0;}
+.sidebar ul li{margin:15px 0;}
+.sidebar ul li a{color:white;
+  text-decoration:none;
+  font-size:18px;}
+.sidebar ul li a:hover{
+  color:#ffcc00;}
+/* content Section */.content{
+  margin-left:220px; /* offset for sidebar */
+  padding:20px;}
+header h1{text-align:center;
+  margin-top:20px;}
+/* Movie Section */
+.movies-section{margin-top:40px;}
+.movie-container{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+}
+button{
+  margin-top:10px;
+  padding:10px 20px;
+  background-color:#28a745;
+  color:white;
+  border:none;
+  cursor: pointer;
+  border-radius:5px;}
+button:hover{
+  background-color:218838;}
+/* Footer styling */
+footer{background-color:#333;
+  color:white;
+  padding:15px;
+  text-align:center;
+  margin-top:40px;}
+footer a{
+  color:#ffcc00;
+  text-decoration:none;}
+footer a:hover{
+ color: white;}
+</style>
+<script>
+function playTrailer(trailerId){
+  const video=document.getElementById(trailerId);
+  video.style.display='block';
+  video.play();}
+</script>
+<body>
+  <!-- Main navigation Bar-->
+  <nav class="navbar">
+    <div class="logo">Movie Hub</div>
+    <ul>
+      <li><a href="./top-movies">Top Movies</a></li>
+      <li><a href="./genres">Genres</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+  <!-- sidebar for Genres-->
+    <aside class="sidebar">
+      <h2>Movie Genres</h2>
+      <ul>
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Comedy</a></li>
+        <li><a href="#">Drama</a></li>
+        <li><a href="#">Horror</a></li>
+   <li><a href="#">Romance</a></li>
+   <li><a href="#">Sci-Fi</a></li>
+      </ul>
+    </aside>
+  <!-- Main Content -->
+  <h1>Welcome To Our Movie Hub</h1><button>Follow Us Today</button>
+  <i><p>Welcome to Our Movie Hub, your ultimate destination for all things movies! Discover the latest releases, explore in-depth reviews, watch trailers, and dive into curated recommendations. Whether you're looking for the next big blockbuster or hidden indie gems, we've got you covered with everything you need to satisfy your movie cravings!</p></i>
+  <img src="/storage/emulated/0/Download/pluto-tv-on-demand-action-movies-265b61a2fd2147fd9b47a618bd6db440.png" height="300px" width="700px">
+  <div>
+  <label for="Movie">Movie</label>
+  <input type="text" id="movie" placeholder="Search Movies"><button>Submit</button>
+  </div>
+  <section id="top-movies" class="movies-section">
+    <h2>Top Movies</h2>
+    <div class="movies-container">
+      <div class="movie">
+        <img src="/storage/emulated/0/Download/MV5BZjAyYjZmMjQtNGZlNi00ZGQ0LTkxNTUtNWQ2YzA3MWJjYjc2XkEyXkFqcGc@._V1_.jpg" height="500px" weight="700px" class="movie-poster">
+        <h3>Yodha 1&2</h3>
+        <button on click="playTrailer('trailer')">Watch Trailer</button>
+        <video id="trailer1" controls style="display:none;">
+          <source src="/storage/emulated/0/New Folder/GAME OF THRONES/GAME OF THRONES S02 E06 JR.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="movie">
+        <img src="/storage/emulated/0/Download/hq720.jpg" height="500px" width="700px" class="movie-poster">
+        <h3>Street Creed</h3>
+        <button onclick="playTrailor('trailer2')">watch Trailer</button>"
+          <video id="trailer2" controls style="display:none;">
+            <source src="/storage/emulated/0/Android/media/com.whatsapp.w4b/WhatsApp Business/Media/WhatsApp Business Video/VID-20241018-WA0099.mp4" type="video/mp4">
+          </video>
+                <div class="movie">
+        <img src="/storage/emulated/0/Download/hq720(0).jpg" height="500px" width="700px" class="movie-poster">
+        <h3>Black Piooner</h3>
+        <button onclick="playTrailor('trailer3')">watch Trailer</button>"
+          <video id="trailer3" controls style="display:none;">
+            <source src="/storage/emulated/0/New Folder/Underworld.Rise.of.the.Lycans.2009.junior.mp4" type="video/mp4">
+          </video>
+      <div class="movie">
+        <img src="/storage/emulated/0/Download/the-idea-of-you-film-poster-2.jpg" height="500px" weight="700px" class="movie-poster">
+        <h3>THE IDEA OF YOU</h3>
+        <button on click="playTrailer('trailer4')">Watch Trailer</button>
+        <video id="trailer4" controls style="display:none;">
+          <source src="/storage/emulated/0/New Folder/GAME OF THRONES/GAME OF THRONES S02 E06 JR.mp4" type="video/mp4">
+        </video>
+      <div class="movie">
+        <img src="/storage/emulated/0/Download/MV5BMDE4Yzc3YTctODE5My00Mjg3LWI0ZDktZjM4MmVkMTQ3ZmNmXkEyXkFqcGc@._V1_.jpg" height="500px" weight="700px" class="movie-poster">
+        <h3>BADE MIYAN</h3>
+        <button on click="playTrailer('trailer5')">Watch Trailer</button>
+        <video id="trailer5" controls style="display:none;">
+          <source src="/storage/emulated/0/New Folder/GAME OF THRONES/GAME OF THRONES S02 E06 JR.mp4" type="video/mp4">
+        </video>
+      </div>
+      </div>
+       </div>
+        </div>
+    </section>
+  </section>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 MovieHub. All rights reserved. <a href="#"contact Us</a></p>
+    <label for="email">Subscribe to our Newsletter</label><br><input id="email" type="email" placeholder="Enter Email"><button>Submit</button>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
